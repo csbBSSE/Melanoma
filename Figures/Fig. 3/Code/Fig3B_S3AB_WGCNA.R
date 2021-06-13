@@ -129,11 +129,11 @@ dev.off()
 #Salmon module
 data_hm <- scale(data[,mergedColors=="salmon"])
 data_hm <- data_hm[rownames(MEfin),]
-jpeg("Figures/Fig. 3/3B_ii_Salmon_Eigengene.jpeg", width = 500, height =250)
-barplot(MEfin[,"salmon"], col = as.character(MEfin$cut))
+jpeg("Figures/Fig. 3/3B_ii_inv_Eigengene.jpeg", width = 500, height =250)
+barplot(MEfin[,"salmon"], col = as.character(MEfin$cut), ylab = "Module eigengene")
 dev.off()
 
-jpeg("Figures/Fig. 3/3B_ii_Salmon_Heatmap.jpeg", width = 500, height =250)
+jpeg("Figures/Fig. 3/3B_ii_inv_Heatmap.jpeg", width = 500, height =250)
 Heatmap(t(data_hm), column_split =MEfin$cut, show_row_names = FALSE, show_row_dend = FALSE, show_column_dend = FALSE, show_column_names = FALSE,
         show_parent_dend_line = FALSE, cluster_rows = FALSE, cluster_columns = FALSE, column_title = NULL, 
         heatmap_legend_param = list(title= c("Scale")))
@@ -142,11 +142,11 @@ dev.off()
 #Yellow module
 data_hm <- scale(data[,mergedColors=="yellow"])
 data_hm <- data_hm[rownames(MEfin),]
-jpeg("Figures/Fig. 3/3B_i_Yellow_Eigengene.jpeg", width = 500, height =250)
-barplot(MEfin[,"yellow"], col = as.character(MEfin$cut))
+jpeg("Figures/Fig. 3/3B_i_Pro_Eigengene.jpeg", width = 500, height =250)
+barplot(MEfin[,"yellow"], col = as.character(MEfin$cut), ylab = "Module eigengene")
 dev.off()
 
-jpeg("Figures/Fig. 3/3B_i_Yellow_Heatmap.jpeg", width = 500, height =250)
+jpeg("Figures/Fig. 3/3B_i_Pro_Heatmap.jpeg", width = 500, height =250)
 Heatmap(t(data_hm), column_split =MEfin$cut, show_row_names = FALSE, show_row_dend = FALSE, show_column_dend = FALSE, show_column_names = FALSE,
         show_parent_dend_line = FALSE, cluster_rows = FALSE, cluster_columns = FALSE,  column_title = NULL, 
         heatmap_legend_param = list(title= c("Scale")))

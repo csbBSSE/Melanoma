@@ -25,7 +25,7 @@ p<- list()
 jpeg("Figures/Fig. 2/2A_Clustering_K_means.jpeg", height = 1200, width = 220)
 for ( i in ds){
   
-  df <- read.delim(paste0("Datasets/", i,".txt"), row.names = 1)
+  df <- read.delim(paste0("Datasets/", i,".txt"), row.names = 1, check.names = F)
   clus1 <- as.character(read.delim(paste0("Datasets/Clusters/", i,".txt"))$x)
   k = which(ds==i)
   p[[k]] <- clus_pca(df,clus1, title = i)
