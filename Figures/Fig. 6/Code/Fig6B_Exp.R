@@ -59,7 +59,7 @@ cut[cut==2] <- c("T")
 cut[cut==3] <- c("N")
 cut[cut==4] <- c("U")
 
-jpeg("Figures/Fig. 6/6C_avg_exp_4843.jpeg", width = 950, height = 300)
+jpeg("Figures/Fig. 6/6B_avg_exp_4843.jpeg", width = 950, height = 300)
 expr(data, list, cut, "GSE134432") 
 dev.off()
 
