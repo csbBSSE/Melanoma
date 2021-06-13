@@ -41,7 +41,7 @@ for ( i in ds){
 
 
 
-#S4D
+#S5A
 ds <- c("GSE7127", "GSE80829")
 list <- c("MITF", "FOS", "ETV5", "SMAD3", "NR2F1","NFIC", "KLF4","JUN", "TFE3", "NR3C1", "TBX3")
 p <- list()
@@ -51,7 +51,7 @@ for ( i in ds){
   df <- read.delim(paste0("Datasets/", i,".txt"), row.names = 1, check.names = F)
   clus1 <- as.character(read.delim(paste0("Datasets/Clusters/", i,".txt"))$x)
   k = which(ds==i)
-  jpeg(filename=paste0("Figures/Fig. 5/S4C_cluster_expr_",i,".jpeg"), height = 500, width = 700)
+  jpeg(filename=paste0("Figures/Fig. 5/S5A_cluster_expr_",i,".jpeg"), height = 500, width = 700)
   cluster_Expression(df,clus1,list, i)
   dev.off()
   
