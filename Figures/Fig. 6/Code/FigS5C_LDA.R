@@ -29,13 +29,13 @@ data2 <- df[cut==4|cut==3,]    #Clubbing invasive subclusters
 cut1 <- cut[cut==1|cut==2]
 cut2 <- cut[cut==4|cut==3]
 
-jpeg("Figures/Fig. 6/S5A_LDA_Pro.jpeg", width = 830, height = 480)
+jpeg("Figures/Fig. 6/S5C_LDA_Pro.jpeg", width = 830, height = 480)
 lda_val(data1[,list],cut1)
 box()
 abline(h=0.6)
 dev.off()
 
-jpeg("Figures/Fig. 6/S5A_LDA_Inv.jpeg", width = 830, height = 480)
+jpeg("Figures/Fig. 6/S5C_LDA_Inv.jpeg", width = 830, height = 480)
 lda_val(data2[,list],cut2)
 box()
 abline(h=0.6)

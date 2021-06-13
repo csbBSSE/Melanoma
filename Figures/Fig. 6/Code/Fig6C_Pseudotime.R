@@ -26,7 +26,7 @@ monocle_sc <- function(df, clusters){
   jpeg("Figures/Fig. 6/6Ci_monocle_phenotype.jpeg")
   print(plot_cell_trajectory(cds, color_by = "Phenotype", show_branch_points = F))
   dev.off()
-  jpeg("Figures/Fig. 6/6Ci_monocle_pseudotime.jpeg")
+  jpeg("Figures/Fig. 6/6Cii_monocle_pseudotime.jpeg")
   print(plot_cell_trajectory(cds, color_by = "Pseudotime", show_branch_points = F))
   dev.off()
   print(plot_cell_trajectory(cds, color_by = "State"))

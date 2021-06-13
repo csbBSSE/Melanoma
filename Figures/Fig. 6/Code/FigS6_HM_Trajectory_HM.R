@@ -180,19 +180,12 @@ list <- c("MITF", "FOS", "SMAD4", "STAT5A", "ETV5",
 for (i in 1:4) {
   
   data <- as.data.frame(scale(t(read.delim(paste0("Datasets/GSE", ds[i],".txt"), row.names = 1))))
-  if (i==1|i==3){
-    
-    jpeg(paste0("Figures/Fig. 6/6B_Heatmap_clusters_GSE",ds[i], ".jpeg"), width = 600, height = 520)
-    
-  }else{
-    jpeg(paste0("Figures/Fig. 6/S5B_Heatmap_clusters_GSE",ds[i], ".jpeg"), width = 600, height = 520)
-  }
-  
+  jpeg(paste0("Figures/Fig. 6/S6_Heatmap_clusters_GSE",ds[i], ".jpeg"), width = 600, height = 520)
   cut <- clus_marker(data, markers,seed = seed[i])  
   dev.off()
   
 
-  jpeg(paste0("Figures/Fig. 6/S5C_trajectory_GSE",ds[i], ".jpeg"), width = 600, height = 520)
+  jpeg(paste0("Figures/Fig. 6/S6_trajectory_GSE",ds[i], ".jpeg"), width = 600, height = 520)
   dist_PCA_plot((data[,list]), cut, list)
   dev.off()
   
