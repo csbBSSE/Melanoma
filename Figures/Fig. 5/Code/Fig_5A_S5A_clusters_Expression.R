@@ -24,7 +24,7 @@ cluster_Expression <- function(data, clus1, genes,title){
 }
 
 
-#5B
+#5A
 ds <- c("GSE4843","GSE137391")
 list <- c("MITF", "FOS", "ETV5", "SMAD3", "NR2F1","NFIC", "KLF4","JUN", "TFE3", "NR3C1", "TBX3")
 

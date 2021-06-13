@@ -59,7 +59,7 @@ correlation <- function(df, list, method, save = FALSE, title, z = F){
 }
 
 
-#5A
+#5C
 
 ds <- c("RACIPE", "GSE4843")
 list <- c("MITF", "FOS", "ETV5", "SMAD3", "NR2F1","NFIC", "KLF4","JUN", "TFE3", "NR3C1", "TBX3")
@@ -87,7 +87,7 @@ jpeg("Figures/Fig. 5/5C_Correlation.jpeg", width = 750, height = 680 )
 cowplot::plot_grid(plotlist = p, nrow = 1)
 dev.off()
 
-#S4C
+#S5B
 
 p <- list()
 ds <- c("GSE7127", "GSE80829", "GSE137391")      
